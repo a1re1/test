@@ -1,0 +1,76 @@
+<project 
+    xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.tylerwhitehurst</groupId>
+    <artifactId>testpackage</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>Test Package</name>
+    <description>Just a test my good sir</description>
+    <url>https://github.com/a1re1/test</url>
+    
+    <organization>
+        <name>com.tylerwhitehurst</name>
+        <url>https://github.com/a1re1</url>
+    </organization>
+    
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/a1re1/test/issues</url>
+    </issueManagement>
+    
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    
+    <scm>
+        <url>https://github.com/a1re1/test</url>
+    </scm>
+    <scm>
+        <connection>scm:git:git://github.com/a1re1/test.git</connection>
+        <developerConnection>scm:git:ssh://github.com:a1re1/test.git</developerConnection>
+        <url>http://github.com/a1re1/test/tree/master</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>a1re1</name>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <repository>
+        <id>ossrh</id>
+        <name>Central Repository OSSRH</name>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
